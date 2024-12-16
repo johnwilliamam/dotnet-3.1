@@ -25,11 +25,12 @@ namespace OpenTelemetryDbApp
             AppContext.SetSwitch("System.Net.Http.SocketsHttpHandler.Http2UnencryptedSupport", true);
             var otlpEndpoint = "http://52.146.40.174:4317";
             var serviceName = "DOTNET31";
+            var serviceVersion = "1.0.0";
             // Configuração de Tracing com OpenTelemetry
             services.AddOpenTelemetryTracing(builder =>
             {
                 builder
-                    //.SetResourceBuilder(ResourceBuilder.CreateDefault().AddService("dotnet-3.1"))
+                    .SetSampler(new AlwaysOnSampler())
                     .AddAspNetCoreInstrumentation()
                     .AddHttpClientInstrumentation()
                     .AddSqlClientInstrumentation()
