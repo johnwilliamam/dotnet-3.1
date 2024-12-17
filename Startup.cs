@@ -33,7 +33,8 @@ namespace OpenTelemetryDbApp
                     .SetSampler(new AlwaysOnSampler())
                     .AddAspNetCoreInstrumentation()
                     .AddHttpClientInstrumentation()
-                    .AddSqlClientInstrumentation()
+                    .AddSqlClientInstrumentation(
+                    options => options.SetDbStatementForText = true)
                     // // Exporta os traces para o console
                     .AddOtlpExporter(options =>
                     {
@@ -68,6 +69,7 @@ namespace OpenTelemetryDbApp
             {
                 app.UseDeveloperExceptionPage();
             }
+            app.UseMiddleware<RequestLoggingMiddleware>();
 
             app.UseRouting();
             app.UseAuthorization();

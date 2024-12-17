@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Mvc;
 using System.Data;
 using MySql.Data.MySqlClient;
 using System;
+using System.Collections.Generic;
 
 namespace OpenTelemetryDbApp.Controllers
 {
@@ -19,6 +20,7 @@ namespace OpenTelemetryDbApp.Controllers
             public string Email { get; set; }
         }
 
+        // Rota para inserir dados no banco
         [HttpPost("insert")]
         public IActionResult InsertData([FromBody] UserRequest user)
         {
@@ -44,6 +46,45 @@ namespace OpenTelemetryDbApp.Controllers
             catch (Exception ex)
             {
                 return StatusCode(500, new { message = "Error inserting data", error = ex.Message });
+            }
+        }
+
+        // Rota para consultar todos os dados
+        [HttpGet("get-all")]
+        public IActionResult GetAllData()
+        {
+            try
+            {
+                var users = new List<UserRequest>();
+
+                using (var connection = new MySqlConnection(_connectionString))
+                {
+                    connection.Open();
+
+                    // Comando SQL para buscar todos os registros
+                    var sql = "SELECT name, email FROM users;";
+
+                    using (var command = new MySqlCommand(sql, connection))
+                    {
+                        using (var reader = command.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                users.Add(new UserRequest
+                                {
+                                    Name = reader["name"].ToString(),
+                                    Email = reader["email"].ToString()
+                                });
+                            }
+                        }
+                    }
+                }
+
+                return Ok(new { message = "Data retrieved successfully", users });
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, new { message = "Error retrieving data", error = ex.Message });
             }
         }
     }

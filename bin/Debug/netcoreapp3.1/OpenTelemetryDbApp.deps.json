@@ -31,7 +31,7 @@
           "OpenTelemetry.Extensions.Hosting": "1.0.0-rc9",
           "OpenTelemetry.Instrumentation.AspNetCore": "1.8.1",
           "OpenTelemetry.Instrumentation.Http": "1.8.1",
-          "OpenTelemetry.Instrumentation.SqlClient": "1.9.0-beta.1",
+          "OpenTelemetry.Instrumentation.SqlClient": "1.0.0-rc9.8",
           "Microsoft.AspNetCore.Antiforgery": "3.1.0.0",
           "Microsoft.AspNetCore.Authentication.Abstractions": "3.1.0.0",
           "Microsoft.AspNetCore.Authentication.Cookies": "3.1.0.0",
@@ -615,7 +615,7 @@
         "dependencies": {
           "Microsoft.Extensions.Logging": "3.1.0",
           "Microsoft.Extensions.Logging.Configuration": "3.1.0",
-          "OpenTelemetry.Api": "1.9.0",
+          "OpenTelemetry.Api": "1.8.0",
           "System.Collections.Immutable": "1.4.0",
           "System.Reflection.Emit.Lightweight": "4.7.0"
         },
@@ -629,29 +629,29 @@
           "lib/netstandard2.0/OpenTelemetry.dll": {}
         }
       },
-      "OpenTelemetry.Api/1.9.0": {
+      "OpenTelemetry.Api/1.8.0": {
         "dependencies": {
           "System.Diagnostics.DiagnosticSource": "8.0.0"
         },
         "runtime": {
           "lib/netstandard2.0/OpenTelemetry.Api.dll": {
             "assemblyVersion": "1.0.0.0",
-            "fileVersion": "1.9.0.1312"
+            "fileVersion": "1.8.0.1229"
           }
         },
         "compile": {
           "lib/netstandard2.0/OpenTelemetry.Api.dll": {}
         }
       },
-      "OpenTelemetry.Api.ProviderBuilderExtensions/1.9.0": {
+      "OpenTelemetry.Api.ProviderBuilderExtensions/1.8.0": {
         "dependencies": {
           "Microsoft.Extensions.DependencyInjection.Abstractions": "8.0.0",
-          "OpenTelemetry.Api": "1.9.0"
+          "OpenTelemetry.Api": "1.8.0"
         },
         "runtime": {
           "lib/netstandard2.0/OpenTelemetry.Api.ProviderBuilderExtensions.dll": {
             "assemblyVersion": "1.0.0.0",
-            "fileVersion": "1.9.0.1312"
+            "fileVersion": "1.8.0.1229"
           }
         },
         "compile": {
@@ -710,7 +710,7 @@
           "Microsoft.AspNetCore.Http.Features": "2.1.1",
           "Microsoft.Extensions.Configuration": "8.0.0",
           "Microsoft.Extensions.Options": "8.0.0",
-          "OpenTelemetry.Api.ProviderBuilderExtensions": "1.9.0",
+          "OpenTelemetry.Api.ProviderBuilderExtensions": "1.8.0",
           "System.Text.Encodings.Web": "7.0.0"
         },
         "runtime": {
@@ -727,7 +727,7 @@
         "dependencies": {
           "Microsoft.Extensions.Configuration": "8.0.0",
           "Microsoft.Extensions.Options": "8.0.0",
-          "OpenTelemetry.Api.ProviderBuilderExtensions": "1.9.0"
+          "OpenTelemetry.Api.ProviderBuilderExtensions": "1.8.0"
         },
         "runtime": {
           "lib/netstandard2.0/OpenTelemetry.Instrumentation.Http.dll": {
@@ -739,15 +739,14 @@
           "lib/netstandard2.0/OpenTelemetry.Instrumentation.Http.dll": {}
         }
       },
-      "OpenTelemetry.Instrumentation.SqlClient/1.9.0-beta.1": {
+      "OpenTelemetry.Instrumentation.SqlClient/1.0.0-rc9.8": {
         "dependencies": {
-          "Microsoft.Extensions.Options": "8.0.0",
-          "OpenTelemetry.Api.ProviderBuilderExtensions": "1.9.0"
+          "OpenTelemetry.Api": "1.8.0"
         },
         "runtime": {
           "lib/netstandard2.0/OpenTelemetry.Instrumentation.SqlClient.dll": {
-            "assemblyVersion": "1.9.0.43",
-            "fileVersion": "1.9.0.43"
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.665"
           }
         },
         "compile": {
@@ -2831,19 +2830,19 @@
       "path": "opentelemetry/1.3.2",
       "hashPath": "opentelemetry.1.3.2.nupkg.sha512"
     },
-    "OpenTelemetry.Api/1.9.0": {
+    "OpenTelemetry.Api/1.8.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-Xz8ZvM1Lm0m7BbtGBnw2JlPo++YKyMp08zMK5p0mf+cIi5jeMt2+QsYu9X6YEAbjCxBQYwEak5Z8sY6Ig2WcwQ==",
-      "path": "opentelemetry.api/1.9.0",
-      "hashPath": "opentelemetry.api.1.9.0.nupkg.sha512"
+      "sha512": "sha512-+daN4OqIXne3QLlFHEzb6ybAETgKs7Hg5jINYT5P8p8A/cEtuP6CRDYdDpOe6AlW8oAaV/nJJ5tLyPUVKKQu0w==",
+      "path": "opentelemetry.api/1.8.0",
+      "hashPath": "opentelemetry.api.1.8.0.nupkg.sha512"
     },
-    "OpenTelemetry.Api.ProviderBuilderExtensions/1.9.0": {
+    "OpenTelemetry.Api.ProviderBuilderExtensions/1.8.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-L0D4LBR5JFmwLun5MCWVGapsJLV0ANZ+XXu9NEI3JE/HRKkRuUO+J2MuHD5DBwiU//QMYYM4B22oev1hVLoHDQ==",
-      "path": "opentelemetry.api.providerbuilderextensions/1.9.0",
-      "hashPath": "opentelemetry.api.providerbuilderextensions.1.9.0.nupkg.sha512"
+      "sha512": "sha512-BLo2IwO+sJZMsedvKyMtDJL1Pk7gto2B5lf0rkGKigihUUYDaWwh7HTYtftTamXn0UthCB9B+VUaF7h9AohXMg==",
+      "path": "opentelemetry.api.providerbuilderextensions/1.8.0",
+      "hashPath": "opentelemetry.api.providerbuilderextensions.1.8.0.nupkg.sha512"
     },
     "OpenTelemetry.Exporter.Console/1.3.2": {
       "type": "package",
@@ -2880,12 +2879,12 @@
       "path": "opentelemetry.instrumentation.http/1.8.1",
       "hashPath": "opentelemetry.instrumentation.http.1.8.1.nupkg.sha512"
     },
-    "OpenTelemetry.Instrumentation.SqlClient/1.9.0-beta.1": {
+    "OpenTelemetry.Instrumentation.SqlClient/1.0.0-rc9.8": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-eoSCWdnVQ/MGt8f60kfhq9UF57lS37ZnlImbO1FMmtSTwaFfpbAS7yHI29J46N1nU6Bgk5DIH2xkkIrvonl7Tw==",
-      "path": "opentelemetry.instrumentation.sqlclient/1.9.0-beta.1",
-      "hashPath": "opentelemetry.instrumentation.sqlclient.1.9.0-beta.1.nupkg.sha512"
+      "sha512": "sha512-UjEvZe79LRaKsUvqRHqv3BsimGZSeescR+iwolaJd7+k9YkTnvubjilyaJYsozlLvdbzJa9zQ9lEc0slL5mXrQ==",
+      "path": "opentelemetry.instrumentation.sqlclient/1.0.0-rc9.8",
+      "hashPath": "opentelemetry.instrumentation.sqlclient.1.0.0-rc9.8.nupkg.sha512"
     },
     "Portable.BouncyCastle/1.9.0": {
       "type": "package",
